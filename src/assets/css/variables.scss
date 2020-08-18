@@ -1,0 +1,74 @@
+$navbar-min-w: 1008px;
+$small-w: 576px;
+$medium-w: 768px;
+$large-w: 992px;
+$extra-large-w: 1200px;
+
+/**/
+@mixin my-scrollbar {
+    ::-webkit-scrollbar {
+        background: rgba(0, 0, 0, 0);
+        width: 12px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: $black-0;
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-button {
+        height: 15px;
+    }
+};
+@mixin navbar {
+    @media (max-width: #{$navbar-min-w - 1px}) {
+        @content
+    }
+};
+@mixin extra-small {
+    @media (max-width: #{$small-w - 1px}) {
+        @content
+    }
+};
+@mixin small {
+    @media (min-width: #{$small-w}) and (max-width: #{$medium-w - 1px}) {
+        @content
+    }
+};
+@mixin medium {
+    @media (min-width: #{$medium-w}) and (max-width: #{$large-w - 1px}) {
+        @content
+    }
+};
+@mixin large {
+    @media (min-width: #{$large-w}) and (max-width: #{$extra-large-w - 1px}) {
+        @content
+    }
+};
+@mixin extra-large {
+    @media (min-width: #{$extra-large-w}){
+        @content
+    }
+};
+
+
+$my-font-color: white;
+$my-font-size-4: 12px;
+$my-font-size-3: 14px;
+$my-font-size-2: 16px;
+$my-font-size-1: 20px;
+$my-font-size-0: 24px;
+
+
+$background-color: rgb(56, 56, 56);
+
+$hover-color: rgba(255, 255, 255, 0.1);
+$focus-color: rgba(255, 255, 255, 0.3);
+$active-color: rgba(255, 255, 255, 0.3);
+
+$black-0: rgb(88, 88, 88);
+$black-1: rgb(58, 58, 58);
+$black-2: rgb(48, 47, 47);
+$black-3: rgb(39, 39, 39);
+$black-4: rgb(31, 31, 31);
+$white-primary: rgb(102, 102, 102);
